@@ -1,35 +1,4 @@
-import {
-  AirVent,
-  BadgeCheck,
-  Bath,
-  Brush,
-  CalendarCheck,
-  ChefHat,
-  CreditCard,
-  DoorOpen,
-  Drill,
-  Droplets,
-  Fan,
-  Flame,
-  GlassWater,
-  HandPlatter,
-  Headphones,
-  Home,
-  IndianRupee,
-  Plug,
-  ShieldCheck,
-  Shirt,
-  Sofa,
-  Sparkles,
-  SprayCan,
-  Snowflake,
-  SunMedium,
-  Utensils,
-  UserCheck,
-  Waves,
-  Wrench
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import type { SiteIconName } from "../components/SiteIcon";
 
 /*
  * MAIN WEBSITE CONTENT FILE
@@ -73,42 +42,42 @@ export const navLinks = [
 ];
 
 export const trustBadges = [
-  { label: "Verified Professionals", icon: UserCheck },
-  { label: "Transparent Pricing", icon: IndianRupee },
-  { label: "Easy App Booking", icon: CalendarCheck },
-  { label: "Local Support", icon: Headphones },
-  { label: "Secure Payments", icon: CreditCard }
-];
+  { label: "Verified Professionals", icon: "userCheck" },
+  { label: "Transparent Pricing", icon: "indianRupee" },
+  { label: "Easy App Booking", icon: "calendarCheck" },
+  { label: "Local Support", icon: "headphones" },
+  { label: "Secure Payments", icon: "creditCard" }
+] satisfies { label: string; icon: SiteIconName }[];
 
 export type Service = {
   name: string;
-  icon: LucideIcon;
+  icon: SiteIconName;
 };
 
 export const services: Service[] = [
-  { name: "Pre-party Cleaning", icon: Sparkles },
-  { name: "After-party Cleaning", icon: SprayCan },
-  { name: "Bathroom Cleaning", icon: Bath },
-  { name: "Kitchen Cleaning", icon: ChefHat },
-  { name: "Water Tank Cleaning", icon: Droplets },
-  { name: "Brooming & Mopping", icon: Brush },
-  { name: "Balcony Cleaning", icon: DoorOpen },
-  { name: "Glass Cleaning", icon: GlassWater },
-  { name: "Room Dusting", icon: SunMedium },
-  { name: "Laundry at Home", icon: Shirt },
-  { name: "Utensil Cleaning", icon: Utensils },
-  { name: "Cooking Service", icon: HandPlatter },
-  { name: "AC Service", icon: AirVent },
-  { name: "Electrician", icon: Plug },
-  { name: "Plumbing", icon: Wrench },
-  { name: "Appliance Repair", icon: Drill },
-  { name: "Sofa Cleaning", icon: Sofa },
-  { name: "Fridge Cleaning", icon: Snowflake },
-  { name: "Fan Cleaning", icon: Fan },
-  { name: "Deep Home Cleaning", icon: Home },
-  { name: "RO Service", icon: Waves },
-  { name: "Geyser Service", icon: Flame },
-  { name: "Basic Home Assistance", icon: ShieldCheck }
+  { name: "Pre-party Cleaning", icon: "sparkles" },
+  { name: "After-party Cleaning", icon: "sprayCan" },
+  { name: "Bathroom Cleaning", icon: "bath" },
+  { name: "Kitchen Cleaning", icon: "chefHat" },
+  { name: "Water Tank Cleaning", icon: "droplets" },
+  { name: "Brooming & Mopping", icon: "brush" },
+  { name: "Balcony Cleaning", icon: "doorOpen" },
+  { name: "Glass Cleaning", icon: "glassWater" },
+  { name: "Room Dusting", icon: "sunMedium" },
+  { name: "Laundry at Home", icon: "shirt" },
+  { name: "Utensil Cleaning", icon: "utensils" },
+  { name: "Cooking Service", icon: "handPlatter" },
+  { name: "AC Service", icon: "airVent" },
+  { name: "Electrician", icon: "plug" },
+  { name: "Plumbing", icon: "wrench" },
+  { name: "Appliance Repair", icon: "drill" },
+  { name: "Sofa Cleaning", icon: "sofa" },
+  { name: "Fridge Cleaning", icon: "snowflake" },
+  { name: "Fan Cleaning", icon: "fan" },
+  { name: "Deep Home Cleaning", icon: "home" },
+  { name: "RO Service", icon: "waves" },
+  { name: "Geyser Service", icon: "flame" },
+  { name: "Basic Home Assistance", icon: "shieldCheck" }
 ];
 
 export const serviceNames = services.map((service) => service.name);
@@ -124,7 +93,7 @@ export const serviceByName = services.reduce<Record<string, Service>>(
 export function findService(name: string): Service {
   return serviceByName[normalizeServiceName(name)] ?? {
     name,
-    icon: Sparkles
+    icon: "sparkles"
   };
 }
 
@@ -152,7 +121,7 @@ export const serviceCategories = [
       "Fridge cleaning",
       "Fan cleaning"
     ],
-    icon: Sparkles
+    icon: "sparkles"
   },
   {
     title: "Repair & Maintenance",
@@ -166,7 +135,7 @@ export const serviceCategories = [
       "RO Service",
       "Geyser Service"
     ],
-    icon: Wrench
+    icon: "wrench"
   },
   {
     title: "Home Help Services",
@@ -178,9 +147,14 @@ export const serviceCategories = [
       "Utensil Cleaning",
       "Basic Home Assistance"
     ],
-    icon: ShieldCheck
+    icon: "shieldCheck"
   }
-];
+] satisfies {
+  title: string;
+  description: string;
+  items: string[];
+  icon: SiteIconName;
+}[];
 
 export const faqItems = [
   {

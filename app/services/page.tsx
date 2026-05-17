@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "../../components/ButtonLink";
 import { PageHero } from "../../components/PageHero";
+import { SiteIcon } from "../../components/SiteIcon";
 import { pageMetadata } from "../../lib/seo";
 import { findService, serviceCategories } from "../../lib/site";
 
@@ -21,12 +22,12 @@ export default function ServicesPage() {
       />
       <section className="section-pad bg-brand-paper">
         <div className="container-pad space-y-8">
-          {serviceCategories.map(({ title, description, items, icon: Icon }) => (
+          {serviceCategories.map(({ title, description, items, icon }) => (
             <div key={title} className="rounded-md border border-brand-green/10 bg-white p-6 shadow-sm sm:p-8">
               <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
                 <div className="max-w-2xl">
                   <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-md bg-brand-mint text-brand-green">
-                    <Icon />
+                    <SiteIcon name={icon} />
                   </div>
                   <h2 className="text-3xl font-extrabold text-brand-ink">{title}</h2>
                   <p className="mt-3 leading-7 text-brand-ink/70">{description}</p>
@@ -37,10 +38,12 @@ export default function ServicesPage() {
                 {items.map((item) => (
                   <div key={item} className="flex items-center justify-between gap-3 rounded-md bg-brand-paper p-4 font-bold text-brand-ink">
                     <span className="flex items-center gap-3">
-                      {(() => {
-                        const Icon = findService(item).icon;
-                        return <Icon className="shrink-0 text-brand-green" size={22} strokeWidth={1.9} />;
-                      })()}
+                      <SiteIcon
+                        name={findService(item).icon}
+                        className="shrink-0 text-brand-green"
+                        size={22}
+                        strokeWidth={1.9}
+                      />
                       {item}
                     </span>
                     <ArrowRight className="shrink-0 text-brand-orange" size={18} />

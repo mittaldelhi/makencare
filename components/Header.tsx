@@ -12,9 +12,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-green/10 bg-white/90 backdrop-blur-xl">
-      <div className="container-pad flex h-20 items-center justify-between gap-4">
+      <div className="container-pad flex h-16 items-center justify-between gap-4 sm:h-[72px] lg:h-20">
         <BrandLogo />
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Main">
           {navLinks.map((link) => (
             <Link
               key={link.href}

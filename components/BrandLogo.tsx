@@ -14,7 +14,7 @@ export function BrandLogo() {
         alt="Make N Care - Your Home Our Care"
         width={360}
         height={92}
-        className="h-12 w-auto max-w-[190px] object-contain sm:h-14 sm:max-w-[230px] lg:max-w-[260px]"
+        className="h-11 w-auto max-w-[210px] object-contain sm:h-12 sm:max-w-[235px] lg:max-w-[255px]"
         priority
       />
     </Link>

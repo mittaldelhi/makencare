@@ -12,6 +12,7 @@ import { ButtonLink } from "../components/ButtonLink";
 import { DownloadBadges } from "../components/DownloadBadges";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { SectionHeading } from "../components/SectionHeading";
+import { SiteIcon } from "../components/SiteIcon";
 import {
   areaChips,
   services,
@@ -24,16 +25,16 @@ export default function Home() {
   return (
     <>
       <section className="overflow-hidden bg-brand-paper">
-        <div className="container-pad grid min-h-[calc(100vh-80px)] items-center gap-12 py-12 lg:grid-cols-[1.03fr_0.97fr] lg:py-16">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-green/15 bg-white px-4 py-2 text-sm font-bold text-brand-green shadow-sm">
+        <div className="container-pad grid min-w-0 items-center gap-10 py-10 sm:py-12 lg:grid-cols-[1.02fr_0.98fr] lg:py-16">
+          <div className="min-w-0">
+            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-brand-green/15 bg-white px-4 py-2 text-sm font-bold text-brand-green shadow-sm">
               <BadgeCheck size={17} />
               Trusted home services at your doorstep
             </div>
-            <h1 className="mt-6 max-w-3xl text-5xl font-extrabold leading-[1.05] text-brand-ink sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 max-w-[22rem] text-3xl font-extrabold leading-[1.08] text-brand-ink sm:max-w-3xl sm:text-5xl lg:text-6xl xl:text-7xl">
               Reliable home services in minutes.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-brand-ink/72">
+            <p className="mt-6 max-w-[22rem] text-base leading-7 text-brand-ink/72 sm:max-w-2xl sm:text-lg sm:leading-8">
               Make N Care helps you book cleaning, repair, and home help
               services through our easy-to-use mobile app.
             </p>
@@ -71,18 +72,18 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative min-h-[460px]">
-            <div className="absolute inset-x-4 bottom-0 top-12 rounded-[40px] bg-brand-mint" />
+          <div className="relative min-h-[380px] min-w-0 max-w-full lg:min-h-[500px]">
+            <div className="absolute inset-x-4 bottom-0 top-8 rounded-[32px] bg-brand-mint lg:rounded-[40px]" />
             <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-brand-orange/14 blur-2xl" />
             <div className="absolute left-0 top-16 h-32 w-32 rounded-full bg-brand-green/16 blur-2xl" />
-            <div className="relative mx-auto flex h-[510px] max-w-[460px] items-end justify-center overflow-hidden rounded-[36px] border border-white/70 bg-white/35 shadow-soft">
+            <div className="relative mx-auto flex h-[390px] w-full max-w-[430px] items-end justify-center overflow-hidden rounded-[28px] border border-white/70 bg-white/35 shadow-soft sm:h-[480px] lg:h-[520px] lg:max-w-[500px] lg:rounded-[36px]">
               <Image
                 src={siteImages.heroStaff}
                 alt="Make N Care staff member in branded green T-shirt"
                 width={620}
                 height={760}
                 priority
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-contain object-center"
               />
             </div>
           </div>
@@ -95,12 +96,12 @@ export default function Home() {
             Built for trusted home care
           </p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {trustBadges.map(({ label, icon: Icon }) => (
+            {trustBadges.map(({ label, icon }) => (
               <div
                 key={label}
                 className="flex items-center gap-3 rounded-md border border-brand-green/10 bg-brand-paper px-4 py-4 text-sm font-bold text-brand-ink"
               >
-                <Icon className="text-brand-green" size={20} />
+                <SiteIcon name={icon} className="text-brand-green" size={20} />
                 {label}
               </div>
             ))}
@@ -136,14 +137,14 @@ export default function Home() {
             subtitle="Choose from cleaning, repair, and care services available through the Make N Care app."
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.slice(0, 20).map(({ name, icon: Icon }) => (
+            {services.slice(0, 20).map(({ name, icon }) => (
               <a
                 key={name}
                 href="/services"
                 className="group rounded-md border border-brand-green/10 bg-brand-paper p-4 transition hover:-translate-y-1 hover:border-brand-green/25 hover:bg-white hover:shadow-soft"
               >
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-md bg-white text-brand-green group-hover:bg-brand-mint">
-                  <Icon size={28} strokeWidth={1.9} />
+                  <SiteIcon name={icon} size={28} strokeWidth={1.9} />
                 </div>
                 <div className="flex items-center justify-between gap-3">
                   <h2 className="text-base font-extrabold text-brand-ink">{name}</h2>
