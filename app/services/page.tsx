@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
-import { ButtonLink } from "@/components/ButtonLink";
-import { PageHero } from "@/components/PageHero";
-import { pageMetadata } from "@/lib/seo";
-import { findService, serviceCategories } from "@/lib/site";
+import { ButtonLink } from "../../components/ButtonLink";
+import { PageHero } from "../../components/PageHero";
+import { pageMetadata } from "../../lib/seo";
+import { findService, serviceCategories } from "../../lib/site";
 
 export const metadata = pageMetadata({
   title: "Services",

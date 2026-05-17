@@ -1,8 +1,8 @@
 import { ArrowRight, Headphones } from "lucide-react";
-import { ButtonLink } from "@/components/ButtonLink";
-import { PageHero } from "@/components/PageHero";
-import { pageMetadata } from "@/lib/seo";
-import { supportTopics } from "@/lib/site";
+import { ButtonLink } from "../../components/ButtonLink";
+import { PageHero } from "../../components/PageHero";
+import { pageMetadata } from "../../lib/seo";
+import { supportTopics } from "../../lib/site";
 
 export const metadata = pageMetadata({
   title: "Support / Help",

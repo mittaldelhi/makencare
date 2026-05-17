@@ -3,9 +3,9 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { BrandLogo } from "@/components/BrandLogo";
-import { ButtonLink } from "@/components/ButtonLink";
-import { navLinks } from "@/lib/site";
+import { BrandLogo } from "./BrandLogo";
+import { ButtonLink } from "./ButtonLink";
+import { navLinks } from "../lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);

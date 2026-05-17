@@ -8,17 +8,17 @@ import {
   Sparkles,
   Star
 } from "lucide-react";
-import { ButtonLink } from "@/components/ButtonLink";
-import { DownloadBadges } from "@/components/DownloadBadges";
-import { FAQAccordion } from "@/components/FAQAccordion";
-import { SectionHeading } from "@/components/SectionHeading";
+import { ButtonLink } from "../components/ButtonLink";
+import { DownloadBadges } from "../components/DownloadBadges";
+import { FAQAccordion } from "../components/FAQAccordion";
+import { SectionHeading } from "../components/SectionHeading";
 import {
   areaChips,
   services,
   siteImages,
   trustBadges,
   whyCards
-} from "@/lib/site";
+} from "../lib/site";
 
 export default function Home() {
   return (

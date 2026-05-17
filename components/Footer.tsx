@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { BrandLogo } from "@/components/BrandLogo";
-import { navLinks, serviceCategories, site } from "@/lib/site";
+import { BrandLogo } from "./BrandLogo";
+import { navLinks, serviceCategories, site } from "../lib/site";
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },

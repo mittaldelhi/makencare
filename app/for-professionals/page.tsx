@@ -1,7 +1,7 @@
 import { CheckCircle2, FileText, UserRoundCheck } from "lucide-react";
-import { ButtonLink } from "@/components/ButtonLink";
-import { PageHero } from "@/components/PageHero";
-import { pageMetadata } from "@/lib/seo";
+import { ButtonLink } from "../../components/ButtonLink";
+import { PageHero } from "../../components/PageHero";
+import { pageMetadata } from "../../lib/seo";
 
 export const metadata = pageMetadata({
   title: "For Professionals",

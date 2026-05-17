@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { siteImages } from "@/lib/site";
+import { siteImages } from "../lib/site";
 
 export function BrandLogo() {
   return (

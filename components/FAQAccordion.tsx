@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import { faqItems } from "@/lib/site";
+import { faqItems } from "../lib/site";
 
 export function FAQAccordion() {
   return (

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site, siteImages } from "@/lib/site";
+import { site, siteImages } from "./site";
 
 type PageSeo = {
   title: string;

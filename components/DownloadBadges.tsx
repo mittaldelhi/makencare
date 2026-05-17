@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site, siteImages } from "@/lib/site";
+import { site, siteImages } from "../lib/site";
 
 export function DownloadBadges({ compact = false }: { compact?: boolean }) {
   return (

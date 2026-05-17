@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { JsonLd } from "@/components/JsonLd";
-import { organizationSchema, mobileAppSchema } from "@/lib/seo";
-import { siteImages } from "@/lib/site";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { JsonLd } from "../components/JsonLd";
+import { organizationSchema, mobileAppSchema } from "../lib/seo";
+import { siteImages } from "../lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://makencare.com"),

@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
-import { PageHero } from "@/components/PageHero";
-import { pageMetadata } from "@/lib/seo";
+import { PageHero } from "../../components/PageHero";
+import { pageMetadata } from "../../lib/seo";
 
 export const metadata = pageMetadata({
   title: "About Us",

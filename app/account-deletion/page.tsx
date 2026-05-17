@@ -1,5 +1,5 @@
-import { PageHero } from "@/components/PageHero";
-import { pageMetadata } from "@/lib/seo";
+import { PageHero } from "../../components/PageHero";
+import { pageMetadata } from "../../lib/seo";
 
 export const metadata = pageMetadata({
   title: "Account Deletion",

@@ -1,5 +1,5 @@
-import { LegalPage } from "@/components/LegalPage";
-import { pageMetadata } from "@/lib/seo";
+import { LegalPage } from "../../components/LegalPage";
+import { pageMetadata } from "../../lib/seo";
 
 export const metadata = pageMetadata({
   title: "Terms & Conditions",
