@@ -57,3 +57,4 @@ For easiest updates, edit `lib/site.ts` first. It controls app links, contact de
 - Confirm app booking language says bookings happen only inside the mobile app.
 - Confirm no fake customer numbers, fake press logos, or fake reviews are present.
 - Run `npm run build` before deployment.
+- For Node hosting, use `server.js` as the application startup file and `npm start` as the start command.

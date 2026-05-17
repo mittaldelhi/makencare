@@ -94,3 +94,15 @@ Then confirm:
 - Legal business details are correct.
 - Every image shown on the site is final.
 - No booking, login, payment, dashboard, or admin flow exists on the website.
+
+## Node Hosting Start File
+
+Use `server.js` as the application startup file.
+
+Use this start command:
+
+```bash
+npm start
+```
+
+The server reads `PORT` from the hosting provider automatically.
