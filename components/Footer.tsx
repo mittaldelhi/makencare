@@ -4,9 +4,8 @@ import { navLinks, serviceCategories, site } from "../lib/site";
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms & Conditions", href: "/terms-and-conditions" },
-  { label: "Refund & Cancellation Policy", href: "/refund-cancellation-policy" },
-  { label: "Account Deletion", href: "/account-deletion" }
+  { label: "Delete Account", href: "/delete-account" },
+  { label: "Contact Support", href: "/contact" }
 ];
 
 export function Footer() {
@@ -29,7 +28,7 @@ export function Footer() {
               {category.title}
             </Link>
           ))}
-          <Link href="/support">Support / Help</Link>
+          <Link href="/contact">Contact Support</Link>
         </FooterGroup>
         <FooterGroup title="Company">
           {navLinks
@@ -39,7 +38,6 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
-          <Link href="/for-professionals">For Professionals</Link>
         </FooterGroup>
         <FooterGroup title="Legal">
           {legalLinks.map((link) => (

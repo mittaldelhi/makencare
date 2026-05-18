@@ -73,9 +73,8 @@ Use the same service names as the `services` list so the correct icon appears on
 Legal page content is inside:
 
 - `app/privacy-policy/page.tsx`
-- `app/terms-and-conditions/page.tsx`
-- `app/refund-cancellation-policy/page.tsx`
-- `app/account-deletion/page.tsx`
+- `app/delete-account/page.tsx`
+- `app/contact/page.tsx`
 
 Before publishing, confirm legal wording with the actual business policy.
 

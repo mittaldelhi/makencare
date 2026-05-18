@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 3000",
     "build": "next build",
-    "start": "node server.js",
-    "start:local": "next start --hostname 127.0.0.1 --port 3000",
-    "lint": "next lint"
+    "preview": "npx serve out"
   },
   "dependencies": {
     "@types/node": "^20.19.27",
@@ -22,8 +20,5 @@
     "tailwindcss": "^3.4.18",
     "typescript": "^5.9.3"
   },
-  "devDependencies": {
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.35"
-  }
+  "devDependencies": {}
 }

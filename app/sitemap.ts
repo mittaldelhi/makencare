@@ -3,15 +3,11 @@ import { site } from "../lib/site";
 
 const paths = [
   "/",
-  "/services",
   "/about",
-  "/for-professionals",
+  "/services",
   "/contact",
-  "/support",
   "/privacy-policy",
-  "/terms-and-conditions",
-  "/refund-cancellation-policy",
-  "/account-deletion"
+  "/delete-account"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -263,25 +263,25 @@ export default function Home() {
       <section className="section-pad bg-brand-paper">
         <div className="container-pad grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
-            title="Earn with Make N Care."
-            subtitle="Join as a service professional and get digital bookings through our platform."
+            title="Ready for easier home care?"
+            subtitle="Explore Make N Care services, download the app, or contact support for help."
           />
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "Receive service requests",
-              "Build your professional profile",
-              "Manage jobs from the app",
-              "Track earnings",
-              "Get customer ratings",
-              "Grow with a trusted local brand"
+              "Home cleaning support",
+              "Repair and maintenance help",
+              "Simple mobile app booking",
+              "Local customer support",
+              "Transparent service information",
+              "Built for Indian homes"
             ].map((benefit) => (
               <div key={benefit} className="flex items-center gap-3 rounded-md bg-white p-4 font-bold text-brand-ink">
                 <CheckCircle2 className="text-brand-green" size={20} />
                 {benefit}
               </div>
             ))}
-            <ButtonLink href="/for-professionals" className="sm:col-span-2">
-              Apply as Professional
+            <ButtonLink href="/contact" className="sm:col-span-2">
+              Contact Support
             </ButtonLink>
           </div>
         </div>

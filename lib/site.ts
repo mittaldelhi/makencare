@@ -36,7 +36,6 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "For Professionals", href: "/for-professionals" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
 ];
@@ -55,29 +54,13 @@ export type Service = {
 };
 
 export const services: Service[] = [
-  { name: "Pre-party Cleaning", icon: "sparkles" },
-  { name: "After-party Cleaning", icon: "sprayCan" },
+  { name: "Home Cleaning", icon: "home" },
   { name: "Bathroom Cleaning", icon: "bath" },
   { name: "Kitchen Cleaning", icon: "chefHat" },
-  { name: "Water Tank Cleaning", icon: "droplets" },
-  { name: "Brooming & Mopping", icon: "brush" },
-  { name: "Balcony Cleaning", icon: "doorOpen" },
-  { name: "Glass Cleaning", icon: "glassWater" },
-  { name: "Room Dusting", icon: "sunMedium" },
-  { name: "Laundry at Home", icon: "shirt" },
-  { name: "Utensil Cleaning", icon: "utensils" },
-  { name: "Cooking Service", icon: "handPlatter" },
   { name: "AC Service", icon: "airVent" },
-  { name: "Electrician", icon: "plug" },
   { name: "Plumbing", icon: "wrench" },
-  { name: "Appliance Repair", icon: "drill" },
-  { name: "Sofa Cleaning", icon: "sofa" },
-  { name: "Fridge Cleaning", icon: "snowflake" },
-  { name: "Fan Cleaning", icon: "fan" },
-  { name: "Deep Home Cleaning", icon: "home" },
-  { name: "RO Service", icon: "waves" },
-  { name: "Geyser Service", icon: "flame" },
-  { name: "Basic Home Assistance", icon: "shieldCheck" }
+  { name: "Electrical Repair", icon: "plug" },
+  { name: "Water Tank Cleaning", icon: "droplets" }
 ];
 
 export const serviceNames = services.map((service) => service.name);
@@ -103,51 +86,18 @@ function normalizeServiceName(name: string) {
 
 export const serviceCategories = [
   {
-    title: "Cleaning Services",
+    title: "Home Cleaning",
     description:
-      "Routine, deep, and special-occasion cleaning services for homes that need reliable care.",
-    items: [
-      "Pre-party cleaning",
-      "After-party cleaning",
-      "Bathroom cleaning",
-      "Kitchen cleaning",
-      "Brooming and mopping",
-      "Balcony cleaning",
-      "Glass cleaning",
-      "Water tank cleaning",
-      "Room dusting",
-      "Deep cleaning",
-      "Sofa cleaning",
-      "Fridge cleaning",
-      "Fan cleaning"
-    ],
-    icon: "sparkles"
+      "Regular and deep cleaning support for tidy, comfortable homes.",
+    items: ["Home Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Water Tank Cleaning"],
+    icon: "home"
   },
   {
     title: "Repair & Maintenance",
     description:
-      "Skilled help for home repairs, fixtures, appliances, and maintenance needs.",
-    items: [
-      "Electrician",
-      "Plumber",
-      "AC service",
-      "Appliance repair",
-      "RO Service",
-      "Geyser Service"
-    ],
+      "Skilled help for essential home repairs and maintenance needs.",
+    items: ["AC Service", "Plumbing", "Electrical Repair"],
     icon: "wrench"
-  },
-  {
-    title: "Home Help Services",
-    description:
-      "Daily home assistance services made easier to discover and request through the app.",
-    items: [
-      "Laundry at Home",
-      "Cooking Service",
-      "Utensil Cleaning",
-      "Basic Home Assistance"
-    ],
-    icon: "shieldCheck"
   }
 ] satisfies {
   title: string;
@@ -210,7 +160,7 @@ export const faqItems = [
   {
     question: "How do I delete my account?",
     answer:
-      "Visit the Account Deletion page to submit a deletion request for your Make N Care account and associated personal data."
+      "Visit the Delete Account page to submit a deletion request for your Make N Care account and associated personal data."
   },
   {
     question: "Is the iOS app available?",
@@ -247,7 +197,7 @@ export const contactCards = [
 ];
 
 export const whyCards = [
-  "20+ Home services",
+  "Essential home services",
   "Verified service partners",
   "Easy app booking",
   "Support when you need help"

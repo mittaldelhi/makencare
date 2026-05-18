@@ -55,8 +55,8 @@ export default function ContactPage() {
                 </div>
               );
             })}
-            <ButtonLink href="/support" className="w-full">
-              Visit Support / Help
+            <ButtonLink href="mailto:support@makencare.com" className="w-full">
+              Email Contact Support
             </ButtonLink>
           </div>
         </div>
