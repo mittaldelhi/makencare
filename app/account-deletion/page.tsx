@@ -1,18 +1,19 @@
 import { PageHero } from "../../components/PageHero";
 import { pageMetadata } from "../../lib/seo";
+import { site } from "../../lib/site";
 
 export const metadata = pageMetadata({
-  title: "Delete Account",
+  title: "Account Deletion",
   description:
-    "Request deletion of your Make N Care account and associated personal data.",
-  path: "/delete-account"
+    "Request deletion of your Make N Care account and associated personal data for Play Store and app compliance.",
+  path: "/account-deletion"
 });
 
-export default function DeleteAccountPage() {
+export default function AccountDeletionPage() {
   return (
     <>
       <PageHero
-        eyebrow="Delete Account"
+        eyebrow="Account Deletion"
         title="Request deletion of your Make N Care account."
         subtitle="Users can request deletion of their Make N Care account and associated personal data."
       />
@@ -50,19 +51,35 @@ export default function DeleteAccountPage() {
           </div>
           <div className="rounded-md border border-brand-green/10 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-extrabold text-brand-ink">
-              How to request deletion
+              Account deletion request form
             </h2>
             <p className="mt-4 leading-7 text-brand-ink/72">
-              Email Make N Care support with your full name, registered phone
-              number, registered email if available, and the request subject
-              "Delete My Account".
+              To request deletion, email support with your full name, registered
+              phone number, registered email if available, and optional reason.
+              Use the subject "Delete My Account".
             </p>
-            <a
-              href="mailto:support@makencare.com?subject=Delete%20My%20Account"
-              className="focus-ring mt-6 inline-flex min-h-12 items-center justify-center rounded-md bg-brand-green px-6 text-sm font-bold text-white"
-            >
-              Email deletion request
-            </a>
+            <div className="mt-6 grid gap-4">
+              {[
+                "Full name",
+                "Registered phone number",
+                "Registered email (optional)",
+                "Reason (optional)"
+              ].map((label) => (
+                <label key={label} className="grid gap-2 text-sm font-semibold text-brand-ink">
+                  {label}
+                  <input
+                    className="min-h-12 rounded-md border border-brand-green/15 px-4 outline-none focus:border-brand-green"
+                    placeholder={label}
+                  />
+                </label>
+              ))}
+              <a
+                href={`mailto:${site.supportEmail}?subject=Delete%20My%20Account`}
+                className="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-brand-green px-6 text-sm font-bold text-white"
+              >
+                Submit deletion request
+              </a>
+            </div>
           </div>
         </div>
       </section>
