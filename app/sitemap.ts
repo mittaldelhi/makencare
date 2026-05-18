@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { site } from "../lib/site";
+import { canonicalUrl } from "../lib/seo";
 
 const paths = [
   "/",
@@ -12,7 +12,7 @@ const paths = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
-    url: `${site.url}${path}`,
+    url: canonicalUrl(path),
     lastModified: new Date(),
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: path === "/" ? 1 : 0.7

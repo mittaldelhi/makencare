@@ -3,8 +3,10 @@ import "./globals.css";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { JsonLd } from "../components/JsonLd";
-import { organizationSchema, mobileAppSchema } from "../lib/seo";
+import { canonicalUrl, mobileAppSchema, organizationSchema } from "../lib/seo";
 import { siteImages } from "../lib/site";
+
+const heroImageUrl = canonicalUrl(siteImages.heroStaff);
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://makencare.com"),
@@ -16,23 +18,23 @@ export const metadata: Metadata = {
     "Make N Care helps you book trusted cleaning, repair, and home care services through our mobile app. Explore services, download the app, and connect with verified professionals.",
   applicationName: "Make N Care",
   alternates: {
-    canonical: "/"
+    canonical: canonicalUrl("/")
   },
   openGraph: {
     type: "website",
-    url: "https://makencare.com",
+    url: canonicalUrl("/"),
     siteName: "Make N Care",
     title: "Make N Care | Trusted Home Services at Your Doorstep",
     description:
       "Book trusted cleaning, repair, and home care services through the Make N Care mobile app.",
-    images: [{ url: siteImages.heroStaff, width: 1200, height: 630 }]
+    images: [{ url: heroImageUrl, width: 1200, height: 630 }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Make N Care | Trusted Home Services at Your Doorstep",
     description:
       "Explore services, download the app, and connect with verified home-service professionals.",
-    images: [siteImages.heroStaff]
+    images: [heroImageUrl]
   },
   robots: {
     index: true,

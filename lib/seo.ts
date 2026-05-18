@@ -7,25 +7,37 @@ type PageSeo = {
   path: string;
 };
 
+export const productionOrigin = "https://makencare.com";
+
+export function canonicalUrl(path = "/") {
+  const normalizedPath = path === "/" ? "" : `/${path.replace(/^\/+|\/+$/g, "")}`;
+  return `${productionOrigin}${normalizedPath}`;
+}
+
+function absoluteAssetUrl(path: string) {
+  return `${productionOrigin}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function pageMetadata({ title, description, path }: PageSeo): Metadata {
-  const url = `${site.url}${path}`;
+  const url = canonicalUrl(path);
+  const imageUrl = absoluteAssetUrl(siteImages.heroStaff);
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: url },
     openGraph: {
       title: `${title} | ${site.name}`,
       description,
       url,
       siteName: site.name,
       type: "website",
-      images: [{ url: siteImages.heroStaff, width: 1200, height: 630 }]
+      images: [{ url: imageUrl, width: 1200, height: 630 }]
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} | ${site.name}`,
       description,
-      images: [siteImages.heroStaff]
+      images: [imageUrl]
     }
   };
 }
@@ -34,8 +46,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.name,
-  url: site.url,
-  logo: `${site.url}${siteImages.logo}`,
+  url: productionOrigin,
+  logo: absoluteAssetUrl(siteImages.logo),
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -58,6 +70,6 @@ export const mobileAppSchema = {
     price: "0",
     priceCurrency: "INR"
   },
-  url: site.url,
+  url: productionOrigin,
   downloadUrl: site.googlePlayUrl
 };
