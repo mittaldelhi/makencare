@@ -94,14 +94,14 @@ Then confirm:
 - Every image shown on the site is final.
 - No booking, login, payment, dashboard, or admin flow exists on the website.
 
-## Node Hosting Start File
+## Static cPanel Deployment
 
-Use `server.js` as the application startup file.
+This project is a static export website. Do not use Setup Node.js App,
+`server.js`, SSR, API routes, server actions, or middleware for production.
 
-Use this start command:
+After `npm run build`, upload the contents of the `out` folder to:
 
-```bash
-npm start
-```
+`/home/mittalai/makencare.com`
 
-The server reads `PORT` from the hosting provider automatically.
+The live folder should contain `index.html`, `.htaccess`, `_next`, `images`,
+`robots.txt`, `sitemap.xml`, and the exported static page files.

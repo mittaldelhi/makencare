@@ -57,4 +57,5 @@ For easiest updates, edit `lib/site.ts` first. It controls app links, contact de
 - Confirm app booking language says bookings happen only inside the mobile app.
 - Confirm no fake customer numbers, fake press logos, or fake reviews are present.
 - Run `npm run build` before deployment.
-- For Node hosting, use `server.js` as the application startup file and `npm start` as the start command.
+- Upload only the generated `out` folder contents to `/home/mittalai/makencare.com`.
+- Do not use Node hosting, `server.js`, SSR, API routes, server actions, or middleware for production.

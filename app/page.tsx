@@ -80,8 +80,8 @@ export default function Home() {
               <Image
                 src={siteImages.heroStaff}
                 alt="Make N Care staff member in branded green T-shirt"
-                width={620}
-                height={760}
+                width={941}
+                height={1672}
                 priority
                 className="h-full w-full object-contain object-center"
               />
@@ -190,9 +190,9 @@ export default function Home() {
                   <Image
                     src={step.image}
                     alt={`${step.title} app screen`}
-                    width={260}
-                    height={460}
-                    className="h-full w-full object-cover"
+                    width={941}
+                    height={1672}
+                    className="h-full w-full object-contain"
                     loading="lazy"
                   />
                 </div>
@@ -231,7 +231,8 @@ export default function Home() {
               src={siteImages.appScreens[0]}
               alt="Make N Care app screenshot placeholder"
               fill
-              className="object-cover"
+              sizes="(min-width: 1024px) 300px, 80vw"
+              className="object-contain"
               loading="lazy"
             />
           </div>

@@ -1,14 +1,15 @@
+DirectoryIndex index.html
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
-
-# Force non-www
-RewriteCond %{HTTP_HOST} ^www\.makencare\.com [NC]
-RewriteRule ^(.*)$ https://makencare.com/$1 [L,R=301]
 
 # Force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://makencare.com%{REQUEST_URI} [L,R=301]
+
+# Force non-www
+RewriteCond %{HTTP_HOST} ^www\.makencare\.com [NC]
+RewriteRule ^(.*)$ https://makencare.com/$1 [L,R=301]
 
 # Remove index.html
 RewriteCond %{THE_REQUEST} /index\.html [NC]
